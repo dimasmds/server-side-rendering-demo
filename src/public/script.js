@@ -1,8 +1,6 @@
 class MovieList extends HTMLElement {
   async connectedCallback() {
-    const response = await fetch('https://api.themoviedb.org/3/movie/now_playing?api_key=4a6eac5979a646031dc1c7a3cd7a2697&language=en-us&page=1');
-    const responseJson = await response.json();
-    this.movies = responseJson.results;
+    this.movies = JSON.parse(this.getAttribute('movies'));
   }
 
   set movies(value) {
