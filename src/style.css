@@ -19,37 +19,33 @@ header > h1 {
     text-transform: uppercase;
 }
 
-movie-list {
-    display: block;
-}
-
-movie-list > .movie__list {
+.movie__list {
     padding: 16px;
     display: grid;
     grid-gap: 16px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-movie-list > .movie__list > .movie__item {
+.movie__list > .movie__item {
     border-radius: 10px;
     overflow: hidden;
 }
 
 @media screen and (max-width: 1200px){
-    movie-list > .movie__list {
+    .movie__list {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
 
 @media screen and (max-width: 1000px){
-    movie-list > .movie__list {
+    .movie__list {
         grid-template-columns: 1fr 1fr;
     }
 }
 
 @media screen and (max-width: 600px){
-    movie-list > .movie__list {
+    .movie__list {
         grid-template-columns: 1fr;
     }
 }
