@@ -13,8 +13,15 @@
     <h1>Movie Catalogue</h1>
 </header>
 <main>
-    <div id="movies" class="movie__list"></div>
+    <div id="movies" class="movie__list">
+        <% movies.forEach(({ title, backdrop_path, overview }) => { %>
+            <div class="movie__item">
+                <img src="https://image.tmdb.org/t/p/w500<%= backdrop_path %>" alt="<%= title %>">
+                <h2><%= title %></h2>
+                <p><%= overview %></p>
+            </div>
+        <% }) %>
+    </div>
 </main>
-<script src="script.js"></script>
 </body>
 </html>
