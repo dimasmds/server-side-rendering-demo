@@ -3,6 +3,7 @@
   const responseJson = await response.json();
   const movies = responseJson.results;
 
+  // Rendering ...
   const moviesElements = document.querySelector('#movies');
   movies.forEach(({ title, backdrop_path, overview }) => {
     const movieElement = document.createElement('div');
